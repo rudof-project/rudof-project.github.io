@@ -1,0 +1,80 @@
+:root {
+    --width-target: calc(100vw / 6);
+    --height-target: calc(100vh / 3);
+    --size: min(var(--width-target), var(--height-target));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+    text-align: center;
+    font-family: monospace;
+}
+
+body, main {
+    margin: 0 auto;
+    height: 100%;
+    width: 90%;
+    display: grid;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+div {
+    display: grid;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-shadow: 0 0 5px #fff;
+  }
+
+div a:first-child {
+    font-size: var(--size);
+    line-height: var(--size);
+}
+
+div a:last-child {
+    font-size: calc(var(--size) / 9);
+    line-height: calc(var(--size) / 9);
+}
+
+p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 1em;
+}
+
+p, p a {
+    font-size: large;
+}
+
+/* just is an isogram */
+#r:after       { content: 'r'; }
+#r:hover:after { content: ':'; }
+#u:after       { content: 'u'; }
+#u:hover:after { content: '?'; }
+#d:after       { content: 'd'; }
+#d:hover:after { content: '$'; }
+#o:after       { content: 'o'; }
+#o:hover:after { content: '='; }
+#f:after       { content: 'f'; }
+#f:hover:after { content: '~'; }

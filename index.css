@@ -57,6 +57,13 @@ div a:last-child {
     line-height: calc(var(--size) / 9);
 }
 
+div#logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 1em;
+}
+
 p {
     position: absolute;
     bottom: 0;

@@ -91,7 +91,7 @@ p a {
 }
 
 #d:hover:after {
-    content: '$';
+    content: '⇩';
 }
 
 #o:after {

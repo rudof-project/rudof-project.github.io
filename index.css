@@ -12,14 +12,15 @@
 html {
     height: 100vh;
     width: 100vw;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: hsl(220, 92%, 42%);
     overflow: hidden;
     text-align: center;
     font-family: monospace;
 }
 
-body, main {
+body,
+main {
     margin: 0 auto;
     height: 100%;
     width: 90%;
@@ -39,12 +40,12 @@ div {
 
 a {
     text-decoration: none;
-    color: white;
+    color: hsl(220, 92%, 42%);
 }
 
 a:hover {
-    text-shadow: 0 0 5px #fff;
-  }
+    text-shadow: 0 0 5px hsl(220, 92%, 42%);
+}
 
 div a:first-child {
     font-size: var(--size);
@@ -63,18 +64,48 @@ p {
     margin: 1em;
 }
 
-p, p a {
+p,
+p a {
     font-size: large;
 }
 
 /* just is an isogram */
-#r:after       { content: 'r'; }
-#r:hover:after { content: ':'; }
-#u:after       { content: 'u'; }
-#u:hover:after { content: '?'; }
-#d:after       { content: 'd'; }
-#d:hover:after { content: '$'; }
-#o:after       { content: 'o'; }
-#o:hover:after { content: '='; }
-#f:after       { content: 'f'; }
-#f:hover:after { content: '~'; }
+#r:after {
+    content: 'r';
+}
+
+#r:hover:after {
+    content: ':';
+}
+
+#u:after {
+    content: 'u';
+}
+
+#u:hover:after {
+    content: '?';
+}
+
+#d:after {
+    content: 'd';
+}
+
+#d:hover:after {
+    content: '$';
+}
+
+#o:after {
+    content: 'o';
+}
+
+#o:hover:after {
+    content: '=';
+}
+
+#f:after {
+    content: 'f';
+}
+
+#f:hover:after {
+    content: '~';
+}

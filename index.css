@@ -47,6 +47,11 @@ a:hover {
     text-shadow: 0 0 5px hsl(220, 92%, 42%);
 }
 
+a.minor {
+    text-decoration: none;
+    color: rgb(117, 114, 136);
+}
+
 div a:first-child {
     font-size: var(--size);
     line-height: var(--size);
@@ -76,21 +81,23 @@ p a {
     font-size: large;
 }
 
-/* just is an isogram */
+/* rudof is an isogram */
 #r:after {
     content: 'r';
 }
 
 #r:hover:after {
-    content: ':';
+    content: '⇑';
 }
 
 #u:after {
     content: 'u';
+    color: rgb(117, 114, 136);
 }
 
 #u:hover:after {
     content: '?';
+    color: rgb(117, 114, 136);
 }
 
 #d:after {
@@ -103,10 +110,12 @@ p a {
 
 #o:after {
     content: 'o';
+    color: rgb(117, 114, 136);
 }
 
 #o:hover:after {
-    content: '=';
+    content: 'x';
+    color: rgb(117, 114, 136);
 }
 
 #f:after {
@@ -114,5 +123,5 @@ p a {
 }
 
 #f:hover:after {
-    content: '~';
+    content: '⇗';
 }

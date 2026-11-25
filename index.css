@@ -52,8 +52,10 @@ a:focus-visible {
     text-shadow: 0 0 5px var(--primary);
 }
 
-/* Big letter. The data-letter attribute gives the letter. The data-hover attribute gives the symbol on hover. */
+/* Big letter. The data-letter attribute gives the letter.
+   The --picture variable gives the picture to show on hover. */
 a.letter {
+    position: relative;
     font-size: var(--size);
     line-height: var(--size);
 }
@@ -62,8 +64,24 @@ a.letter::after {
     content: attr(data-letter);
 }
 
+/* The picture is always in the page, but not visible.
+   Thus the browser loads it before the first hover. */
+a.letter::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--picture) center / contain no-repeat;
+    opacity: 0;
+}
+
+/* On hover, show the picture and hide the letter.
+   The letter keeps its space, thus the layout does not move. */
+a.letter:hover::before {
+    opacity: 1;
+}
+
 a.letter:hover::after {
-    content: attr(data-hover);
+    visibility: hidden;
 }
 
 div a:last-child {
